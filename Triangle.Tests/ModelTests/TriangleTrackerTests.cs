@@ -26,5 +26,12 @@ namespace Triangle.Tests
       TriangleTracker testTriangle = new TriangleTracker();
       Assert.AreEqual("isosceles triangle", testTriangle.IsTriangle(3, 3, 2));
     }
+
+    [TestMethod]
+    public void IsTriangle_IsTriangleEquilateral_IsEquilateral()
+    {
+      TriangleTracker testTriangle = new TriangleTracker();
+      Assert.AreEqual("equilateral triangle", testTriangle.IsTriangle(3, 3, 3));
+    }
   }
 }
