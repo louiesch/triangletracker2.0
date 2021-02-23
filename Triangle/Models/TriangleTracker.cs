@@ -2,10 +2,16 @@ namespace Triangle
 {
   public class TriangleTracker
   {
-    public bool IsTriangle(int side1, int side2, int side3)
+    public string IsTriangle(int side1, int side2, int side3)
     {
-      //logic here
-      return false;
+      if (side1 > (side2 + side3) || side2 > (side1 + side3) || side3 > (side1 + side2))
+      {
+        return "not a triangle";
+      }
+      else
+      {
+        return "is a triangle";
+      }
     }
   }
 }
