@@ -14,17 +14,17 @@ namespace Triangle.Tests
     }
 
     [TestMethod]
-    public void IsTriangle_CanMakeTriangle_IsATriangle()
-    {
-      TriangleTracker testTriangle = new TriangleTracker();
-      Assert.AreEqual("is a triangle", testTriangle.IsTriangle(2, 2, 3));
-    }
-
-    [TestMethod]
     public void IsTriangle_IsTriangleScalene_IsScalene()
     {
       TriangleTracker testTriangle = new TriangleTracker();
       Assert.AreEqual("scalene triangle", testTriangle.IsTriangle(2, 3, 4));
+    }
+
+    [TestMethod]
+    public void IsTriangle_IsTriangleIsosceles_IsIsosceles()
+    {
+      TriangleTracker testTriangle = new TriangleTracker();
+      Assert.AreEqual("isosceles triangle", testTriangle.IsTriangle(3, 3, 2));
     }
   }
 }

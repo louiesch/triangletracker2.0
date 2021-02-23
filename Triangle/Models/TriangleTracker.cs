@@ -10,7 +10,7 @@ namespace Triangle
       }
       else
       {
-        return "is a triangle";
+        return "scalene triangle";
       }
     }
   }
