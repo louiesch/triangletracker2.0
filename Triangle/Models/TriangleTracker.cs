@@ -1,18 +1,29 @@
-namespace Triangle
+namespace Triangle.Models
 {
   public class TriangleTracker
   {
-    public string IsTriangle(int side1, int side2, int side3)
+    public int Side1 {get; set;}
+    public int Side2 {get; set;}
+    public int Side3 {get; set;}
+
+    public TriangleTracker(int side1, int side2, int side3)
     {
-      if (side1 > (side2 + side3) || side2 > (side1 + side3) || side3 > (side1 + side2))
+      Side1 = side1;
+      Side2 = side2;
+      Side3 = side3;
+    }
+
+    public string IsTriangle()
+    {
+      if (Side1 > (Side2 + Side3) || Side2 > (Side1 + Side3) || Side3 > (Side1 + Side2))
       {
         return "not a triangle";
       }
-      else if (side1 != side2 && side2 != side3 && side3 != side1)
+      else if (Side1 != Side2 && Side2 != Side3 && Side3 != Side1)
       {
         return "scalene triangle";
       }
-      else if (side1 == side2 && side2 == side3)
+      else if (Side1 == Side2 && Side2 == Side3)
       {
         return "equilateral triangle";
       }
